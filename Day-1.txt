@@ -1,0 +1,227 @@
+TypeScript:
+-->It is open source and cross platform language
+-->It is used for developing angular application
+-->It is superset of javaScript
+-->It is strict strong type
+
+Environment setup of TypeScript:
+1.Install Node Js
+   verify:
+   open cmd:
+   c:\>node -v
+   c:\>npm -v
+
+2.Install Typescript
+   open cmd:
+   >npm install -g typescript@latest
+   g-->global
+   verify:
+   >tsc -v
+  
+3.IDE install
+  vs code
+ 
+
+sample program:
+===============
+xyz.ts
+ cosole.log('Hello vivek');
+
+ compile:
+ tsc <filename>.ts
+ .ts-->typescript extension
+tsc xyz.ts---> xyz.js
+
+ run:
+ node <filename>.js
+.js-->javascript extension
+
+node xyz.js--->execute
+
+variables:
+==========
+-->named memory location
+3 types of states:
+=================
+declaration:
+	var x; -->declaration
+
+Assignment/rendering:
+	x=10;--->Assignment
+
+Initialization:
+	var x=10 --->Initialization
+
+var keyword:
+-----------
+-->var allows 3 states
+--> var can declare or initialize in any block of a fuction and access from another block 
+
+Ex-1
+var x=10;
+var y=20;
+function f1()
+{
+    var x=100;
+    if(x==100)
+    {
+        var y;
+        y=200;
+        console.log(`Inside if block x=${x} and y=${y} `);
+    }
+    console.log(`Inside function x=${x} and y=${y} `);
+}
+console.log(`outside function x=${x} and y=${y} `)
+f1();
+o/p:
+outside function x=10 and y=20 
+Inside if block x=100 and y=200 
+Inside function x=100 and y=200
+
+
+let:
+-->it allows 3 states
+-->It  declared or initialized inside a block and access within block only.
+Ex-2:
+function f1()
+{
+    let x=100;
+    if(x==100)
+    {
+        let y;
+        y=200;
+        console.log(`Inside if block x=${x} and y=${y} `);
+    }
+    console.log(`Inside function x=${x} and y=${y} `);
+}
+f1();
+o/p:
+Error: Cannot find name 'y'.
+
+3.const key
+-->it allows only initialization state
+-->it can access only within block
+Ex-3
+function f1()
+{
+    const x=100;
+    if(x==100)
+    {
+	x=200;
+        const y;
+        y=200;
+        console.log(`Inside if block x=${x} and y=${y} `);
+    }
+    console.log(`Inside function x=${x} and y=${y} `);
+}
+f1();
+Error: cannot change value
+
+Datatypes:
+=======
+2 categories:
+1.primitive
+2.non-primitive
+
+1.primitive
+number:integer,float
+Ex-1
+let x:number=10;
+let y:number=20.10;
+let z:number=-30;
+
+console.log(`x=${x}, y=${y}, z=${z}`);
+o/p:
+x=10, y=20, z=-30
+
+string:group of characters
+1.'string'
+2."string"
+3.`string`
+
+Ex 
+let msg:string="<a href='home.html'>Home</a>"
+Task:
+o/p It's Vivek
+
+o/p: D:\pics\flower
+D:\\pics\\flower
+
+string methods:It return character.
+
+1.charAt(index):
+parameter:index
+return:character
+Ex
+let x:string="Hello world";
+console.log(x.charAt(6));
+op:
+o
+
+2.charCodeAt(index): it return character Ascii value:
+parameter:index:
+return:Ascii value
+Ex-
+let x:string="Hello aorld";
+console.log(x.charCodeAt(6));
+op:
+97
+
+
+Task:
+take input string find first character is upper or lower
+input1:hello
+o/p :success
+input2:Hello
+o/p:fail
+Hint:
+a-z==>97-122
+A-Z==65-90
+Ex:
+let x="Hello";
+
+if(x.charCodeAt(0)>=97 && x.charCodeAt(0)<=122)
+{
+    console.log("success");
+}
+else
+{
+    console.log("fail");
+}
+
+*startsWith('string/char'):
+parameter:'string/char'
+return:boolean true/false
+Ex
+let x:string="Hello";
+
+console.log(x.startsWith("he"));
+op:false
+
+
+*endsWith('string/char'):
+parameter:'string/char'
+return:boolean true/false
+Ex
+let x:string="Hello";
+console.log(x.endsWith('lo'))
+op:true
+
+Task:
+input1:10
+op:positive even
+input2:-5
+op:negative odd
+
+Task:
+input1:hello
+op:456(ascii sum)
+Hint:
+let x:string="Hello";
+for(var i=0;i<x.length;i++)
+{
+    console.log(x[i]);
+}
+
+
+

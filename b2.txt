@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+   <head>
+         <meta name="viewport" content="width=device-width,initial-scale=1">
+			<link rel="stylesheet"
+ href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css" 
+integrity="sha512-usVBAd66/NpVNfBge19gws2j6JZinnca12rAe2l+d+QkLU9fiG02O1X8Q6hepIpr/EYKZvKx/I9WsnujJuOmBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.min.js" integrity="sha512-a6ctI6w1kg3J4dSjknHj3aWLEbjitAXAjLDRUxo2wyYmDFRcz2RJuQr5M3Kt8O/TtUSp8n2rAyaXYy1sjoKmrQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        </head>
+	<body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+				<div class="container-fluid">
+						<a href="#" class="navbar-brand">VasanthaRama</a>
+                  <button type="button" class="navbar-toggler" data-bs-toggle="collapse"
+						data-bs-target="#navbarCollapse">
+                      <span class="navbar-toggler-icon"></span>  
+						</button>
+
+                  
+					<div class="collapse navbar-collapse" id="navbarCollapse"> 
+                      <div class="navbar-nav">
+									<a href="#" class="nav-item nav-link">Home</a>
+									<a href="#" class="nav-item nav-link">Products</a>
+									<a href="#" class="nav-item nav-link">Services</a>
+									<a href="#" class="nav-item nav-link">Contact</a>
+                      </div>
+							<div class="navbar-nav ms-auto">
+									<a href="#" class="nav-item nav-link">Register</a>
+									<a href="#" class="nav-item nav-link">Login</a>
+									
+                      </div>
+               </div>
+				</div>
+ 
+        </nav>
+ <div class="container">
+   <div class="p-5 my-4 bg-light rounded-3">
+		<h2>Learn to Design Webpage with Bootstrap</h2>
+        <p class="lead">
+
+				State affects behavior, behavior affects state. We know that objects
+have state and behavior, represented by instance variables and methods. But until now, we
+haven’t looked at how state and behavior are related. We already know that each instance of a
+class (each object of a particular type) can have its own unique values for its instance variables.
+Dog A can have a name “Fido” and a weight of 70 pounds. Dog B is “Killer” and weighs 9 pounds.
+And if the Dog class has a method makeNoise(), well, don’t you think a 70-pound dog barks a
+bit deeper than the little 9-pounder? (Assuming that annoying yippy sound can be considered
+a bark.) Fortunately, that’s the whole point of an object—it has behavior that acts on its state. In
+other words, methods use instance variable values. Like, “if dog is less than 14 pounds, make
+yippy sound, else...” or “increase weight by 5”. <b>Let’s go change some state.</b>
+        </p>
+  </div>
+   
+
+<div class="row">
+  <div class="col-md-4">
+		<h2>HTML</h2>
+       <p>
+				A class is the blueprint for an object. When you
+write a class, you’re describing how the JVM
+should make an object of that type.
+
+      </p>
+      <p> <a href="https://www.w3schools.com/html/" target="_blank" class="btn btn-success">
+        Learn More &raquo;   </a></p>
+ </div>
+<div class="col-md-4">
+		<h2>CSS</h2>
+       <p>
+				A class is the blueprint for an object. When you
+write a class, you’re describing how the JVM
+should make an object of that type.
+
+      </p>
+      <p> <a href="https://www.w3schools.com/CSS/" target="_blank" class="btn btn-success">
+        Learn More &raquo;</a></p>
+</div>
+
+<div class="col-md-4">
+		<h2>BootStrap</h2>
+       <p>
+				A class is the blueprint for an object. When you
+write a class, you’re describing how the JVM
+should make an object of that type.
+
+      </p>
+      <p> <a href="https://www.w3schools.com/bootstrap/" target="_blank" class="btn btn-success">
+        Learn More &raquo;</a></p>
+</div>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+     <thead>
+      <tr>
+        <th>Code</th>
+        <th>Course Name </th>
+        <th>Duration</th>
+        <th>Course Fee</th>
+        <th> #</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>C101</td>
+        <td>HtML BootCamp</td>
+        <td> 30 days</td>
+        <td> Rs.10000/-</td>
+        <td><button class="btn-warning">Register</button>
+      </tr>
+ <tr>
+        <td>C101</td>
+        <td>CSS BootCamp</td>
+        <td> 30 days</td>
+        <td> Rs.10000/-</td>
+        <td><button class="btn-warning">Register</button>
+      </tr>
+ <tr>
+        <td>C101</td>
+        <td>BOOTSTAP BootCamp</td>
+        <td> 30 days</td>
+        <td> Rs.10000/-</td>
+        <td><button class="btn-warning">Register</button>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="m-4">
+     <h3> Sign In Here </h3>
+     <form action="" method="post">
+     
+        <div class="row align-items-center">
+
+					<div class="col-md-auto col-12">
+							<input type="email" class="form-control" id="inputemail" placeholder="Email" required/>
+               </div>
+					<div class="col-md-auto col-12">
+							<input type="password" class="form-control" id="inputpassword" placeholder="Password" required/>
+               </div>
+					<div class="col-md-auto col-12">
+							<input type="checkbox" class="form-check-input" id="remeneberme"/>
+                     <label class="form-check-label" for="remeneberme">Remember Me </label>
+               </div>
+               <div class="col-md-auto col-12">
+							<button type="submit" class="btn btn-danger">Sign In</button>
+               </div>
+
+
+        </div>
+     </form>
+</div>
+<div class="row">
+  <div class="col-4">
+     <div class="card text-center">
+       <div class="card-header">HTML</div>
+       <div class="card-body">
+          <p class="card-text">A class is the blueprint for an object.</p>
+           <a href="#" class="btn btn-warning">Know More</a>
+       </div>
+     <div class="card-footer">3 Years</div>
+  </div>
+</div>
+<div class="col-4">
+     <div class="card text-center">
+       <div class="card-header">HTML</div>
+       <div class="card-body">
+          <p class="card-text">A class is the blueprint for an object.</p>
+           <a href="#" class="btn btn-warning">Know More</a>
+       </div>
+     <div class="card-footer">3 Years</div>
+  </div>
+  </div> 
+<div class="col-4">
+     <div class="card text-center">
+       <div class="card-header">HTML</div>
+       <div class="card-body">
+          <p class="card-text">A class is the blueprint for an object.</p>
+           <a href="#" class="btn btn-warning">Know More</a>
+       </div>
+     <div class="card-footer">3 Years</div>
+  </div>
+</div>
+</div>
+
+ <hr>
+<footer>
+    <div class="row">
+      <div class="col-md-6">
+            <p> Copyright &copy; 2022 VasanthaRama.com</p>
+      </div>
+      <div class="col-md-6 text-md-end">
+            <a href="#" class="text-dark">Terms Of Use</a>
+            <span class="text-muted mx-2">|</span>
+            <a href="#" class="text-dark">Privacy Policy</a>
+       </div>
+    </div>
+</footer>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</body>
+</html>

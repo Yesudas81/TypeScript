@@ -1,0 +1,126 @@
+Ascii sum:
+var str:string='vivek';
+let sum=0
+
+for( var i=0;i<str.length;i++)
+{
+   sum=sum+str.charCodeAt(i); 
+}
+console.log(sum);
+op:
+549
+
+
+
+5.indexOf(char):return index else -1
+param:char
+return:index
+Ex
+var str:string='vivek';
+console.log(str.indexOf('e'));
+op:
+3
+
+6.lastIndexOf(char):return index else -1
+param:char
+return:index
+Ex
+var str:string='vivek';
+console.log(str.lastIndexOf('v'));
+op
+2
+
+var str:string='vivek';
+console.log(str.lastIndexOf('y'));
+op:
+-1
+
+Task3:
+ip:abc@gmail.com
+op:success
+ip2:xyz
+op:success
+Hint:indexOf()
+
+7.replace(old,new):
+return: string
+Ex Hello Typescript
+Hello JavaScript
+Ex
+var str:string='welcome to Typescript';
+console.log(str.replace('Typescript','javascript'));
+op:
+welcome to javascript
+
+8.substring(start index,end index):portion of data,bidirection
+return: string
+Ex
+var str:string='welcome to Typescript';
+console.log(str.substring(0,7));
+console.log(str.substring(7,0));
+op:
+welcome
+welcome
+
+9.split(delimeter):
+return: array
+Ex
+var str:string='welcome,to,Typescript';
+console.log(str.split(','));
+op:
+[ 'welcome', 'to', 'Typescript' ]
+
+10.trim(): deleting white spaces
+return:string
+Ex
+var str:string='   vivek   ';
+console.log(str.trim());
+op:
+vivek
+
+boolean:
+true/false
+Ex
+var isValid:boolean=false
+if(10<20)
+{
+    isValid=true
+}
+console.log(isValid);
+op
+true
+
+null:
+Ex
+let x=prompt("enter Number");
+console.log(x);
+op:
+null
+
+Non-Primitive Types:
+1.Array
+2.Object
+3.Regular Expression
+
+1.Array
+-->different types of data
+-->dynamic size
+-->stack,queue,dictionary
+-->sequence order(index based order)
+Ex
+let arr=['orange','mango',1,1.10,true]
+for(let y of arr)
+console.log(y);
+op:
+orange
+mango
+1
+1.1
+true
+
+Task
+5 student names print using for loop:
+
+
+
+

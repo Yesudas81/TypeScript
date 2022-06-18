@@ -1,0 +1,120 @@
+Declaring Array
+-->we can use var,let or const.
+-->Array uses the data type with meta character [], which specifies the range of values
+  
+  let arr:string[];
+
+ -->must specify meta character []
+
+Ex-1
+ let values:number[]=[];
+values[0]=10;
+values[1]=20;
+console.log(values[0]);
+
+Ex-2
+let values:number[]=[];// declaration
+values=[10,20,30];//initialization/assignment
+for(let x of values)
+console.log(x);
+
+Ex-3
+let values:any[]=[];// declaration
+values=[10,10.5,"20",true];//initialization/assignment
+for(let x of values)
+console.log(x);
+
+Functions:
+1.toString():return all values with comma(,) seperated
+
+2.join(): join all  elements in array with specified delimeter
+
+3.filter(): based on specified condition it filter the data
+
+4.slice(): It can extract elements based on index number
+
+
+Ex-1
+
+let values:string[]=["TV","mobile","Laptop","Desktop"];
+console.log(`To String: ${values.toString()}`);
+console.log(`Join: ${values.join('==>')}`);
+console.log(`split: ${values.slice(1,3)}`);
+op:
+To String: TV,mobile,Laptop,Desktop
+Join: TV==>mobile==>Laptop==>Desktop
+split: mobile,Laptop
+
+Ex-filter
+let values:number[]=[1,2,3,4,5,6,7,8,9,10];// 2,4,6,8,10
+console.log(values.filter(function(x){return x%2==0}).toString());
+console.log(values.filter(function(x){return x%2==0}).join(" "));
+op:
+2,4,6,8,10
+2 4 6 8 10
+
+Task-above ex using for loop
+
+let values:number[]=[1,2,3,4,5,6,7,8,9,10];// 2,4,6,8,10
+for(let x of values)
+{
+    if(x%2==0)
+    console.log(`${x}==>`);//2==>4==>10==>
+}
+op:
+2==>
+4==>
+6==>
+8==>
+10==>
+
+Add elements into Array:
+
+push()==>add new element at end
+
+unshift(): add new element at first
+
+Ex
+let values=["Tv","Laptop","Desktop","Mobile"];
+console.log(values.join(" "));//Tv","Laptop","Desktop","Mobile
+values.push("speakers");
+console.log(values.join(" "));//Tv","Laptop","Desktop","Mobile,speakers
+values.unshift("mouse");
+console.log(values.join(" "));//Tv","Laptop","Desktop","Mobile
+op:
+Tv Laptop Desktop Mobile
+Tv Laptop Desktop Mobile speakers
+
+
+Operators
+operator:symbol(+,%,)
+operand: value(x,y)
+
+
+1.unary operator
+-->single operand
+   ++,--
+   ex:x++
+2.binary operator
+-->two operand
+    +,-,%
+    Ex a+b
+3.ternary operator
+-->three operands
+   ? :
+   (10<20)?true :false
+
+op:
+ true+true==>error
+ true+10===>error
+ true+"A"==>trueA
+
+ // console.log(true+true);
+// console.log(true+10);
+console.log(true+"A");
+
+==: compare values
+===: comparing types
+
+
+

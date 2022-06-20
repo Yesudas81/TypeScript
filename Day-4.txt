@@ -1,0 +1,208 @@
+Functions: block of code
+use:reusability
+function fun()
+{
+}
+syntax:
+let funname=(parameters):[returntyp]=>{statements}
+Ex
+let add = (a:number,b:number) =>
+{
+    return a+b;
+}
+console.log(add(10,20));
+ ;
+let sub= (a:number,b:number) =>
+{
+    return a-b;
+}
+ ;
+ console.log(sub(40,20));
+
+ Task:
+ let fun=(a:number,b:number,c:string)=>
+ {
+    return a+b;
+ }
+
+
+ console.log(fun(10,20,'+'));
+  
+
+
+Objects:
+ different type of data:
+
+ let num:{a:number,b:number}=
+{
+    a:10,
+    b:20
+};
+
+console.log(num.a);
+console.log(num.b);
+op:
+10
+20
+
+
+class:
+variables and methods:
+class Vehicle
+{
+    public honk():void
+    {
+        console.log("beep");    
+    }
+}
+
+// let vehicle=new Vehicle();
+// vehicle.honk();
+class Car extends Vehicle
+{
+    private drive():void
+    {
+        console.log('car drive');  
+    }
+
+    private speed():void
+    {
+        console.log('car speed');  
+    }
+
+    demoDrive():void
+    {
+        this.drive();
+    }
+}
+let car=new Car();
+car.honk();
+car.demoDrive();
+op:
+beep 
+car drive
+
+
+constructor:
+class Vehicle
+{
+    constructor()
+    {
+        console.log('vehicle constructor');  
+    }
+
+
+    public honk():void
+    {
+        console.log("beep");    
+    }
+}
+
+// let vehicle=new Vehicle();
+// vehicle.honk();
+class Car extends Vehicle
+{
+    constructor()
+    {
+        super();
+        console.log('car constructor');
+    }
+    private drive():void
+    {
+        console.log('car drive');  
+    }
+
+    private speed():void
+    {
+        console.log('car speed');  
+    }
+
+    demoDrive():void
+    {
+        this.drive();
+    }
+}
+let car=new Car();//vehicle constructor car constructor
+car.honk();//beep
+car.demoDrive();//car drive
+
+
+class Vehicle
+{
+    constructor(str:string)
+    {
+        console.log('hello '+str);  
+    }
+
+
+    public honk():void
+    {
+        console.log("beep");    
+    }
+}
+
+// let vehicle=new Vehicle();
+// vehicle.honk();
+class Car extends Vehicle
+{
+    constructor(s:string)
+    {
+        super(s);
+        console.log('car '+s);
+    }
+    private drive():void
+    {
+        console.log('car drive');  
+    }
+
+    private speed():void
+    {
+        console.log('car speed');  
+    }
+
+    demoDrive():void
+    {
+        this.drive();
+    }
+}
+let car=new Car('asha');//vehicle constructor car constructor
+car.honk();//beep
+car.demoDrive();//car drive
+
+op:
+hello asha
+car asha
+beep
+car drive
+
+
+object calling
+
+let obj=
+{
+    name:'raji',
+    year:new Date(),
+    summary():string{
+        return `Name:${this.name}`
+    }
+}
+
+let drink=
+{
+    color:'brown',
+    sugar:40,
+    summary():string{
+        return `Name:${this.color}`
+    }
+}
+
+function msg(drink)
+{
+    console.log(drink.summary());
+}
+msg(obj)
+
+
+
+
+

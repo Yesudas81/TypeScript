@@ -1,0 +1,222 @@
+Enum:group of const declared at a time
+enum Month{
+    Jan='January',
+    Feb='February',
+    Mar='March',
+    Apr='April'
+}
+
+console.log(Month);
+console.log(`---------------------------`);
+console.log(Month.Feb);
+console.log(`---------------------------`);
+for(let x in Month)
+{
+    console.log(`${x}=>${Month[x]}`);
+}
+for(let x in Month)
+{
+    console.log(`${Month[x]}`);
+}
+op:
+{ Jan: 'January', Feb: 'February', Mar: 'March', Apr: 'April' }
+---------------------------
+February
+---------------------------
+Jan=>January
+Feb=>February
+Mar=>March
+Apr=>April
+January
+February
+March
+April
+
+Switch:
+let date:number=new Date().getDay();
+let fullDay='';
+switch(date){
+    case 0: fullDay='SunDay'; break;
+    case 1: fullDay='MonDay'; break;
+    case 2: fullDay='TuesDay'; break;
+    case 3: fullDay='WednesDay'; break;
+    case 4: fullDay='ThursDay'; break;
+    case 5: fullDay='FriDay'; break;
+    case 6: fullDay='SaturDay'; break;
+    default: fullDay='Invalid Input'; 
+}
+console.log(fullDay);
+op:
+wednesday
+
+//interface with object
+interface Mobile{
+    name:string,
+    color:string,
+    price:number
+}
+
+//funtion oriented object
+let mobile:Mobile={
+    name:'Samsung',
+    color:'black',
+    price:50000
+}
+
+console.log(mobile);
+console.log(mobile.name);
+op:
+{ name: 'Samsung', color: 'black', price: 50000 }
+Samsung
+
+
+//inner object
+interface Student
+{
+    sid:number,
+    sname:string,
+    saddr:
+    {
+        city:string,
+        state:string
+    }
+}
+
+let student:Student={
+    sid:25,
+    sname:"vivek",
+    saddr:
+    {
+        city:"vijayawada",
+        state:"Ap"
+    }
+}
+
+console.log(student);
+console.log(student.sname);
+console.log(student.saddr.state);
+op:
+{ sid: 25, sname: 'vivek', saddr: { city: 'vijayawada', state: 'Ap' } }
+vivek
+Ap
+
+using inner interface:
+interface Address{
+    city:string,
+    state:string
+}
+
+interface Student
+{
+    sid:number,
+    sname:string,
+    saddr:Address
+}
+
+let address:Address={
+    city:"vijayawada",
+    state:"Ap"
+}
+let student:Student={
+    sid:25,
+    sname:"vivek",
+    saddr:address
+}
+
+console.log(student);
+console.log(student.sname);
+console.log(student.saddr.state);
+op:
+{ sid: 25, sname: 'vivek', saddr: { city: 'vijayawada', state: 'Ap' } }
+vivek
+Ap
+
+//array of objects
+interface Employee{
+    name:string,
+    age:number,
+    designation:string
+}
+
+let employee:Employee[]=
+[
+    {
+        name:"ajay",
+        age:25,
+        designation:'Developer'
+    },
+    {
+        name:"raju",
+        age:35,
+        designation:'Tester'
+    },
+    {
+        name:"raghu",
+        age:40,
+        designation:'Business Analyst'
+    },
+]
+
+console.log(employee[2]);
+op:
+{ name: 'raghu', age: 40, designation: 'Business Analyst' }
+
+
+spread operator(...)
+
+let arr1=[10,20,30];
+let arr2=[100,200,300];
+let arr:number[]=[];
+for(let x of arr1)
+{
+    arr.push(x);
+}
+for(let x of arr2)
+{
+    arr.push(x);
+}
+console.log(arr);
+
+let arr3=[...arr1,...arr2]
+console.log(arr3);
+op:
+[ 10, 20, 30, 100, 200, 300 ]
+[ 10, 20, 30, 100, 200, 300 ]
+
+Task1:
+interface Address=> dno,city,state
+interface Heroine=>name,age,Addres
+object:address,heroine
+print data==>name,age,dno,city,state
+
+Task2:
+interface Marks==>m1,m2,m3
+interface Student==>sid,sname,Marks
+Object:marks,student
+print data==>sid,sname,m1,m2,m3
+
+
+Hint:
+interface Address{
+    city:string,
+    state:string
+}
+
+interface Student
+{
+    sid:number,
+    sname:string,
+    saddr:Address
+}
+//object
+let address:Address={
+    city:"vijayawada",
+    state:"Ap"
+}
+let student:Student={
+    sid:25,
+    sname:"vivek",
+    saddr:address
+}
+
+

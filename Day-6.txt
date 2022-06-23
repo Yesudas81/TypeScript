@@ -1,0 +1,181 @@
+//function oriented using student object
+
+var student:any = {
+    name: "Ajay",
+    age: 28,
+    course: "IT"
+};
+console.log(student);
+delete student.course;
+console.log(student);
+student.college="PVP";
+console.log(student);
+op:
+{ name: 'Ajay', age: 28, course: 'IT' }
+{ name: 'Ajay', age: 28 }
+{ name: 'Ajay', age: 28, college: 'PVP' }
+
+OOPS using student object:
+class Student{
+    //properties
+    private name:string;
+    private age:number;
+    private course:string;
+
+    //constructor
+    constructor(name:string,age:number,course:string)
+    {
+        this.name=name;
+        this.age=age;
+        this.course=course;
+    }
+
+    //getter and setter
+
+    // get names():string{
+    //     return this.name;
+    // }
+
+    // set names(name:string)
+    // {
+    //     this.name=name;
+    // }
+    
+
+    // get ages():number{
+    //     return this.age;
+    // }
+     
+    // set ages(age:number)
+    // {
+    //     this.age=age;
+    // }
+    
+    // get courses():string{
+    //     return this.course;
+    // }
+
+    // set courses(course:string){
+    //     this.course=course;
+    // }
+
+    //instance method
+    public print():void{
+        console.log(`Name: ${this.name} Age: ${this.age} Course: ${this.course}`);
+        
+    }
+
+    //static method
+    public static detais():void
+    {
+        console.log("student details");
+        
+    }
+}
+
+let s1=new Student("Ajay",25,"IT");
+s1.print();
+Student.detais();
+
+let s2=new Student("Arun",28,"CSE");
+s2.print();
+op:
+Name: Ajay Age: 25 Course: IT
+student details
+Name: Arun Age: 28 Course: CSE
+
+Inheritance:
+extends properities from child to parent
+method overloading not supported
+method overriding supported
+polymorphism:many forms
+
+class BasciCal//parent class/base class/super class
+{
+
+    public result:number;
+
+    constructor()
+    {
+        this.result=0;
+    }
+
+    //instance
+    public calSum(a:number,b:number)
+    {
+        console.log(`sum: ${a+b}`);
+    }
+}
+
+class AdvCal extends BasciCal//child class/derived class/sub class
+{
+    
+
+    public calSub(a:number,b:number)
+    {
+        console.log(`Subraction: ${a-b}`);
+        
+    }
+}
+
+let ac:AdvCal=new AdvCal();
+console.log(ac);//AdvCal {resul=0}
+ac.calSum(10,20);
+ac.calSub(100,20);
+
+let bc:BasciCal=new BasciCal()
+console.log(bc);
+bc.calSum(20,30);
+//bc.calSub(40,20);
+op:
+AdvCal { result: 0 }
+sum: 30
+Subraction: 80
+BasciCal { result: 0 }
+sum: 50
+
+
+interface:it contains abstract methods, declaration, no implementations
+abstract methods:just declaration no implementations
+abstract class:normal methods+abstract methods
+concrete class/normal class
+
+interface IEmployee{
+    fName:string,
+    lName:string,
+    desg:string,
+    bio():void
+}
+
+abstract class AbsEmployee implements IEmployee{
+    fName:string;
+    lName:string;
+    desg:string;
+    abstract bio():void;
+
+    constructor(fName:string,lName:string,desg:string)
+    {
+        this.fName=fName;
+        this.lName=lName;
+        this.desg=desg;
+    }
+}
+//concrete class/normal class
+class Employee extends AbsEmployee
+{
+    constructor(fName:string,lName:string,desg:string)
+    {
+        super(fName,lName,desg);
+    }
+    
+    bio(): void {
+        console.log(`First Name: ${this.fName} Last Name: ${this.lName} Designation: ${this.desg}` );
+    }
+}
+let emp=new Employee("vivek","d","dev");
+console.log(emp.fName);
+
+emp.bio();
+op:
+vivek
+First Name: vivek Last Name: d Designation: dev
